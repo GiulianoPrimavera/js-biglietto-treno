@@ -24,10 +24,12 @@ if (isNaN(nKmPercorso)){
         //modifico il prezzo sulla base dell'età del passeggero
         if (etaPasseggero < 18) {
             prezzoBigliettoMinorenni = prezzoBiglietto - ((20 / 100) * prezzoBiglietto); //qui viene calcolato il 20% del prezzo del biglietto base da rimuovere per restituire un prezzo del biglietto ridotto
-            alert("il prezzo del tuo biglietto è di " +  (Math.round(prezzoBigliettoMinorenni * 100) / 100) + "€");
+            prezzoBigliettoMinorenni = prezzoBigliettoMinorenni.toFixed(2);
+            alert("il prezzo del tuo biglietto è di " +  prezzoBigliettoMinorenni + "€");
         } else if (etaPasseggero > 65){
             prezzoBigliettoOver65 = prezzoBiglietto - ((40 / 100) * prezzoBiglietto);//qui viene calcolato il 40% del prezzo del biglietto base da rimuovere per restituire un prezzo del biglietto ridotto
-            alert("il prezzo del tuo biglietto è di " + (Math.round(prezzoBigliettoOver65 * 100) / 100) + "€");
+            prezzoBigliettoOver65 =  prezzoBigliettoOver65.toFixed(2);
+            alert("il prezzo del tuo biglietto è di " + prezzoBigliettoOver65 + "€");
         } else{
             alert("il prezzo del tuo biglietto è di " + (Math.round(prezzoBiglietto * 100) / 100) + "€");
         }
