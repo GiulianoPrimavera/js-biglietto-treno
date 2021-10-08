@@ -16,7 +16,6 @@ if (isNaN(nKmPercorso)){
     //calcolo il prezzo del bigletto base
     let prezzoBiglietto = nKmPercorso * 0.21;
 
-
     //verifico che l'età indicata dall'utente sia un numero e non parole
     if (isNaN(etaPasseggero)){
         alert("input non valido, per favore inserire un età scritta con valore numerico");
@@ -31,6 +30,7 @@ if (isNaN(nKmPercorso)){
             prezzoBigliettoOver65 =  prezzoBigliettoOver65.toFixed(2);
             alert("il prezzo del tuo biglietto è di " + prezzoBigliettoOver65 + "€");
         } else{
+            prezzoBiglietto = prezzoBiglietto.toFixed(2);
             alert("il prezzo del tuo biglietto è di " + (Math.round(prezzoBiglietto * 100) / 100) + "€");
         }
     }
